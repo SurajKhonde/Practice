@@ -1,11 +1,14 @@
 {
   "name": "practice",
+  "homepage": "https://SurajKhonde.github.io/Practice",
   "version": "1.0.0",
   "description": "",
   "main": "Script.js",
   "scripts": {
-    "test": "jest",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "predeploy": "rd /s /q dist && parcel build index.html --public-url https://SurajKhonde.github.io/Practice/",
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
   },
   "keywords": [
     "[]"
@@ -13,6 +16,7 @@
   "author": "suraj and",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "parcel": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
